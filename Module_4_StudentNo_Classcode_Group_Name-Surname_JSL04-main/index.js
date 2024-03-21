@@ -2,44 +2,26 @@ const preferedMonster = "Regular"; // Corrected to match the case in the descrip
 const preferedMonster2 = "Sugar-free";
 
 let userPreference = 'Sugar-free'; // Possible values: 'Regular', 'Sugar-free', or undefined
-
-if (userPreference === undefined) {
-    userPreference = preferedMonster; // Default to "Regular" if preference is not set
-}
+userPreference = userPreference === undefined ? preferedMonster : userPreference;
 
 // Print whether the user prefers a "Regular" or "Sugar-free" variety
 console.log(`User's preferred Monster Energy drink: ${userPreference}`);
 
 let cansLeft = 3; // Any number of cans
-if(cansLeft <= 5) {
-    console.log('Time to restock!');
-}else if(cansLeft >= 6) {
-    console.log("We're stocked!")
-}
+const stockStatus = cansLeft <= 5 ? 'Time to restock!' : "We're stocked!";
+console.log(stockStatus);
 
+let heartRate = 95;
+const message = heartRate < 100 ? "Boost needed!" : "Energy levels are high!";
+console.log(message);
 
-let heartRate = 95; // Current heart rate in bpm
-if (heartRate < 100){
-    console.log("Boost needed!");
-} else {
-    console.log("Energy level are high!")
-}
-
-
-let currentTemp = 4; // Current temperature in °C
-if(currentTemp <= 5) {
-    console.log("Chilled to perfection!");
-} else {
-    console.log("Needs a cooler!");
-}
+let currentTemp = 6
+const messageTemp = currentTemp <= 5 ? "Chilled to perfection!" : "Needs a cooler!"
+console.log(messageTemp);
 
 let currentHour = 1; 
-if(currentHour >= 7 && currentHour <= 24) {
-    console.log("Unleash the beast!");
-} else {
-    console.log("Better stick to water.")
-}
-
+const messageHour = currentHour >= 7 ? "Unleash the beast!" : "Better stick to the water."
+console.log(messageHour);
 
 
 
